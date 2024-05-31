@@ -6,6 +6,9 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  console.log(email)
+  console.log(typeof email)
+
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -29,11 +32,11 @@ export default function Home() {
       >
         <label>
           Email:
-          <input type="email" value={email} onChange={handleEmailChange} required />
+          <input type="email" value={email} onChange={handleEmailChange} className='text-black' required />
         </label>
         <label>
           Password:
-          <input type="password" value={password} onChange={handlePasswordChange} required />
+          <input type="password" value={password} className='text-black' onChange={handlePasswordChange} required />
         </label>
         <input 
           type="submit" 
